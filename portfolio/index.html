@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Personal Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    .tab {
+      background-color: #66cdaa; /* Change color as desired */
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 0 20px 20px; /* Adjust border radius */
+    }
+
+    .profile-photo {
+      width: 150px; /* Adjust size of the profile photo */
+      height: 150px;
+      border-radius: 50%; /* Make the photo circular */
+      object-fit: cover;
+      border: 5px solid white; /* Add a border around the photo */
+    }
+    .h1{
+        color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Colorful Tab with Name and Profile Photo -->
+    <div class="tab">
+      <div class="text-center">
+        <img src="assets/my_photo.jpg" class="profile-photo" alt="Your Photo">
+        <h1 class="h1">MAYURA P</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Rest of your sections (About Me, Projects, Contact Me, etc.) -->
+        <!-- Photo Grid (Carousel) Section -->
+        <section class="bg-light p-5" id="some">
+            <div class="container">
+              <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="assets/durga.png" class="d-block w-100 img-with-border" alt="Concrete meets bricks">
+                      </div>
+                      <div class="col-md-6">
+                        <img src="assets/lrhr.png" class="d-block w-100 img-with-border" alt="Light, white and tight Scandinavian design">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="assets/volcano.png" class="d-block w-100 img-with-border" alt="White walls with designer chairs">
+                      </div>
+                      <div class="col-md-6">
+                        <img src="assets/pgr.png" class="d-block w-100 img-with-border" alt="Modern living room">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add more carousel items for additional photos -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    <!-- ... -->
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Name</p>
+  </footer>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
