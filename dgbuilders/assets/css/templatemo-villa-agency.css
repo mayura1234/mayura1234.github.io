@@ -656,6 +656,15 @@ Header Style
   .header-area .main-nav .menu-trigger span:after {
     background-color: #1e1e1e;
     width: 100%;
+<<<<<<< HEAD:dgbuilders/assets/css/templatemo-villa-agency.css
+=======
+  /*  display: none; */
+    -webkit-transition: all 0s ease 0s;
+    -moz-transition: all 0s ease 0s;
+    -o-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+    margin-left: 0px;
+>>>>>>> e89da74fc204d013d9344282ed53d5d0c20652cf:dgbuilders/durga_builders/assets/css/templatemo-villa-agency.css
   }
 
   .header-area .main-nav .menu-trigger span {
