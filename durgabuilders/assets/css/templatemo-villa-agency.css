@@ -465,9 +465,9 @@ Header Style
 }
 
 .header-area .main-nav .nav li a {
-  display: block;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* display: block; */
+  padding-left: 10px;
+  padding-right: 10px;
   font-weight: 500;
   font-size: 15px;
   height: 40px;
@@ -623,7 +623,7 @@ Header Style
     left: 0;
     width: 100%;
     background-color: #fff;
-    padding: 10px 0;
+    padding: 0px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 999;
@@ -656,15 +656,12 @@ Header Style
   .header-area .main-nav .menu-trigger span:after {
     background-color: #1e1e1e;
     width: 100%;
-<<<<<<< HEAD:dgbuilders/assets/css/templatemo-villa-agency.css
-=======
   /*  display: none; */
     -webkit-transition: all 0s ease 0s;
     -moz-transition: all 0s ease 0s;
     -o-transition: all 0s ease 0s;
     transition: all 0s ease 0s;
     margin-left: 0px;
->>>>>>> e89da74fc204d013d9344282ed53d5d0c20652cf:dgbuilders/durga_builders/assets/css/templatemo-villa-agency.css
   }
 
   .header-area .main-nav .menu-trigger span {
