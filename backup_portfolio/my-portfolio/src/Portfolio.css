@@ -1,0 +1,107 @@
+/* Portfolio.css */
+
+header {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .name-header {
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .email {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .social-icons {
+    margin-top: 15px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-icons a {
+    font-size: 24px;
+    color: #000;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  
+  .twinkling-btn {
+    margin-top: 20px;
+  }
+  
+  .twinkling-animation {
+    animation: twinkling 1s infinite;
+  }
+  
+  @keyframes twinkling {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  .container-line {
+    margin: 20px 0;
+  }
+  
+  .section {
+    padding: 20px 0;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .img-with-border {
+    border: 2px solid #000;
+  }
+  
+  .img-desktop {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-item {
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .carousel-item img {
+    border: 2px solid #000;
+  }
+  
+  .footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .bg-dark {
+    background-color: #343a40 !important;
+  }
+  
+  .text-light {
+    color: #f8f9fa !important;
+  }
+  
+  .text-dark {
+    color: #343a40 !important;
+  }
+  

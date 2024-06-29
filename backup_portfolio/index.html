@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts - Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  
+
+  <script>
+
+    // Function to scroll to a specific section
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+  // Function to open the PDF file
+  function openPDF() {
+    window.open('assets/Mayura_Resume.pdf', '_blank');
+  }
+
+  // Function to apply twinkling effect on button click
+  function twinklingEffect() {
+    const pdfButton = document.getElementById('pdfButton');
+    pdfButton.classList.add('twinkling-animation');
+
+    // Remove twinkling effect after 2 seconds
+    setTimeout(() => {
+      pdfButton.classList.remove('twinkling-animation');
+    }, 2000);
+  }
+
+  // Execute this code when the window is fully loaded
+  window.addEventListener('load', () => {
+    // Click event listener for the twinkling button
+    document.getElementById('pdfButton').addEventListener('click', () => {
+      openPDF();
+      twinklingEffect();
+    });
+  });
+  </script>
+
+  <style>
+    /* Custom styles */
+    .tab {
+      background-image: linear-gradient(to right, rgba(255, 0, 0, 0.075), rgb(140, 0, 255));
+      color: rgb(255, 255, 255);
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(177, 96, 96, 0.021);
+    }
+
+    .name-header {
+      color: rgba(14, 3, 66, 0.637); /* Change name color */
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/* Change font family */
+      font-weight: 70; /* Apply bold font */
+      font-size: 36px; /* Adjust font size */
+      margin-top: 10px; /* Add some top margin */
+    }
+
+
+
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px; /* Adjust spacing */
+    }
+
+    .social-icons li {
+      margin-right: 10px; /* Adjust spacing between icons */
+    }
+
+    .social-icons img {
+      width: 30px; /* Adjust the size of social media icons */
+      height: auto;
+      cursor: pointer; /* Show pointer cursor on hover */
+    }
+    #section1 {
+      background: linear-gradient(to bottom, #b99f9f3a, #e4aeae); /* Adjust gradient colors as needed */
+      padding: 50px 0; /* Adjust padding as needed */
+    }
+    #section2{
+      background: linear-gradient(to bottom, #b9ad9f8c, #aee4dd); /* Adjust gradient colors as needed */
+      padding: 50px 0;
+    }
+    #section3{
+      background: linear-gradient(to bottom, #adb99f6c, #dbaee4); /* Adjust gradient colors as needed */
+      padding: 50px 0;
+    }
+    #section4{
+    background: linear-gradient(to bottom, #b99fad4f, #e4aedd); /* Adjust gradient colors as needed */
+    padding: 50px 0;
+  }
+  .container-line {
+    border: 2px solid rgba(252, 38, 0, 0.438);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  .section {
+    border: 2px solid #6a6d6c;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  .twinkling-btn {
+    /* Add any styles for the button */
+    /* Example styles */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Keyframes for twinkling animation */
+  @keyframes twinkling {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  /* Apply the twinkling animation */
+  .twinkling-animation {
+    animation: twinkling 1s infinite;
+  }
+  
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <!-- Colorful Tab with Name and Profile Photo -->
+    <div class="tab">
+      <div class="text-center">
+        <img src="assets/my_photo.jpg" class="profile-photo" alt="Your Photo">
+        <h1 class="name-header">MAYURA P</h1>
+        <p class="email">Email: <a href="mailto:mayurap1002@gmail.com" target="_blank">mayurap1002@gmail.com</a></p>
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/Mayura.p.Bhat"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/mayura-p-872087239/"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com/mayura_pelthaje/"><i class="fab fa-instagram-square"></i></a></li>
+          <li><a href="https://x.com/Mayura_Pelthaje"><i class="fab fa-twitter-square"></i></a></li>
+          <!-- Add more social media icons as needed -->
+        </ul>
+        <div class="text-center">
+          <!-- Twinkling button -->
+          <button id="pdfButton" class="btn btn-primary twinkling-btn">View PDF</button>
+        </div>
+    
+      </div>
+    </div>
+
+
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+<!-- ... -->
+<div class="col-md-12">
+  <div class="container-line">
+    <h4 style="font-family:'Times New Roman', Times, serif;">CAREER OBJECTIVE:</h4>
+    <p style="font-family:'Courier New', Courier, monospace; text-align: justify;">
+      Intend to work with a leading research and development firm in demanding and challenging roles, thereby gaining relevant industry exposure and developing expertise in software development and consulting. Also, to strike a common chord between the organization's objective and self through a symbiotic relationship that captures versatility, excellence, and passion to grow in the future.
+    </p>
+  </div>
+</div>
+
+
+<div class="col-md-12">
+  <div class="container-line">
+    <h4 style="font-family:'Times New Roman', Times, serif;">ACADEMIC DETAILS:</h4>
+    <p style="font-family:'Courier New', Courier, monospace; text-align: justify;">
+      <!-- Example: -->
+      <strong>University :</strong> Visvesvaryya Technological University, Belagavi<br>
+      <strong>College :</strong> Vivekananda College of Engineering and Technology, Puttur<br>
+      <strong>Degree:</strong> Master of Computer Applications<br>
+      <strong>Year of Graduation:</strong>2023<br>
+      <!-- Add more academic details as needed -->
+    </p>
+  </div>
+</div>
+
+<div class="col-md-12 text-center">
+  <div class="container">
+    <h2 style="font-family:'Courier New', Courier, monospace; text-align: center;">PROJECTS:</h2>
+      <!-- Add more project details as needed -->
+    </p>
+  </div>
+</div>
+<!-- ... -->
+
+      </div>
+    </div>
+    <section class="bg-light p-5" id="some">
+      <div class="container">
+        <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-6 col-lg-6">
+                  <img src="assets/durga.png" class="d-block w-100 img-with-border img-desktop" alt="Concrete meets bricks">
+                  <div class="text-center mt-2 mb-2">
+                    <button onclick="scrollToSection('section1')" class="btn btn-primary">Durga Builders</button>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                  <img src="assets/lrhr.png" class="d-block w-100 img-with-border img-desktop" alt="Light, white and tight Scandinavian design">
+                  <div class="text-center mt-2 mb-2">
+                    
+                    <button onclick="scrollToSection('section2')" class="btn btn-primary">Image resolution improvisation</button>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6 col-lg-6">
+                  <img src="assets/volcano.png" class="d-block w-100 img-with-border img-desktop" alt="White walls with designer chairs">
+                  <div class="text-center mt-2 mb-2">
+                    <button onclick="scrollToSection('section3')" class="btn btn-primary">Volcano Analysis</button>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                  <img src="assets/pgr.png" class="d-block w-100 img-with-border img-desktop" alt="Modern living room">
+                  <div class="text-center mt-2 mb-2">
+                    <button onclick="scrollToSection('section4')" class="btn btn-primary">Grievance redressal web app</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more carousel items for additional photos -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section1">
+      <div class="container">
+        <h2 style="font-family: 'Times New Roman', Times, serif;">Durga Builders and Environmental Solutions</h2>
+        <p style="font-family: 'Courier New', Courier, monospace;">Durga Builders and Environmental Services has adopted an uncompromising policy of providing quality housing and commercial/retail spaces over the last 37 years. Constantly evolving over four decades, Durga has pioneered new designs and introduced new building technologies with the sole aim of satisfying and delighting the customer. In turn, customers have handsomely rewarded us with unwavering loyalty and trust.
+  
+        Over the next few years Durga will expand its footprints into newer cities and bring to the customer more modern and sustainable buildings, while keeping its high standards of quality and ethical dealings unchanged</p>
+        <div class="row justify-content-center"> <!-- Center the content -->
+          <div class="col-md-6 text-center"> <!-- Set the column width and center the button -->
+            <a href="https://mayura1234.github.io/durgabuilders/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Click here to open website</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Section 1 -->
+  
+    <!-- Section 2 -->
+    <section class="section" id="section2">
+      <div class="container">
+        <h2 style="font-family: 'Times New Roman', Times, serif;">Image super-resolution</h2>
+        <p style="font-family: 'Courier New', Courier, monospace;">The project aims to develop a model which generates high definition images from the given
+        image. The objective is to enhance the resolution and quality of low resolution image to generate
+        attractive images with high resolution. The model is trained on a dataset of paired low and high
+        resolution images.</p>
+      </div>
+    </section>
+    <!-- End of Section 2 -->
+  
+    <!-- Section 3 -->
+    <section class="section" id="section3">
+      <div class="container">
+        <h2 style="font-family: 'Times New Roman', Times, serif;">Volcano Eruption analysis </h2>
+        <p style="font-family: 'Courier New', Courier, monospace;">The ultimate goal of the project is to provide a useful tool for predicting volcanic activity and
+        providing early warning to communities that may be affected. This has the potential to make a
+        significant contribution to the field of volcano eruption prediction and could have important
+        practical applications in helping to protect communities and prevent loss of life and property.</p>
+      </div>
+    </section>
+    <!-- End of Section 3 -->
+  
+    <!-- Section 4 -->
+    <section class="section" id="section4">
+      <div class="container">
+        <h2 style="font-family: 'Times New Roman', Times, serif;">Public Grievance Redressal App</h2>
+        <p style="font-family: 'Courier New', Courier, monospace;">The Public Grievance Redressal Portal is an online platform designed to facilitate the submission,
+        processing, and resolution of public complaints. The portal provides a user-friendly interface for
+        individuals to register, login, and report grievances they encounter in their daily lives. The system
+        incorporates three key roles: users, Grievance Routing Officers (ROs), and Grievance Redressal
+        Officers (GROs), each with distinct responsibilities and access levels.</p>
+      </div>
+    </section>
+
+  </main>
+
+
+  <style>
+    /* Custom styles for mobile */
+    @media (max-width: 767px) {
+      .img-desktop {
+        border: 6px solid #20222791; /* Thin border for desktop */
+        margin-bottom: 10px; /* Add some space between images */
+      }
+    }
+  
+    /* Custom styles for desktop */
+    @media (min-width: 768px) {
+      .img-with-border {
+        border: 2px solid #18192073; /* Thick border for mobile */
+        margin-bottom: 10px; /* Add some space between images */
+      }
+    }
+
+    .section {
+      border: 2px solid #66cdaa; /* Change border color */
+      border-radius: 15px; /* Apply rounded borders */
+      padding: 20px; /* Add some padding for content */
+      margin-bottom: 20px; /* Add space between sections */
+    }
+  </style>
+
+
+  <footer style="background-color: #000000; color: rgb(197, 151, 151); text-align: center; padding: 15px; border-top: 5px solid #fff;">
+    &copy; 2023 Mayura
+  </footer>
+</body>
+</html>

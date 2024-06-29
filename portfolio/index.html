@@ -1,351 +1,472 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+Template Name: Hoppler
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts - Roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-  
+<title>Mayura Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
-  <script>
-
-    // Function to scroll to a specific section
-    function scrollToSection(sectionId) {
-      var section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-
-  // Function to open the PDF file
-  function openPDF() {
-    window.open('assets/Mayura_Resume.pdf', '_blank');
+<style>
+  html {
+    scroll-behavior: smooth;
   }
+</style>
 
-  // Function to apply twinkling effect on button click
-  function twinklingEffect() {
-    const pdfButton = document.getElementById('pdfButton');
-    pdfButton.classList.add('twinkling-animation');
-
-    // Remove twinkling effect after 2 seconds
-    setTimeout(() => {
-      pdfButton.classList.remove('twinkling-animation');
-    }, 2000);
-  }
-
-  // Execute this code when the window is fully loaded
-  window.addEventListener('load', () => {
-    // Click event listener for the twinkling button
-    document.getElementById('pdfButton').addEventListener('click', () => {
-      openPDF();
-      twinklingEffect();
-    });
-  });
-  </script>
-
-  <style>
-    /* Custom styles */
-    .tab {
-      background-image: linear-gradient(to right, rgba(255, 0, 0, 0.075), rgb(140, 0, 255));
-      color: rgb(255, 255, 255);
-      padding: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0 0 20px 20px;
-    }
-
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid rgba(177, 96, 96, 0.021);
-    }
-
-    .name-header {
-      color: rgba(14, 3, 66, 0.637); /* Change name color */
-      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/* Change font family */
-      font-weight: 70; /* Apply bold font */
-      font-size: 36px; /* Adjust font size */
-      margin-top: 10px; /* Add some top margin */
-    }
-
-
-
-
-    .social-icons {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px; /* Adjust spacing */
-    }
-
-    .social-icons li {
-      margin-right: 10px; /* Adjust spacing between icons */
-    }
-
-    .social-icons img {
-      width: 30px; /* Adjust the size of social media icons */
-      height: auto;
-      cursor: pointer; /* Show pointer cursor on hover */
-    }
-    #section1 {
-      background: linear-gradient(to bottom, #b99f9f3a, #e4aeae); /* Adjust gradient colors as needed */
-      padding: 50px 0; /* Adjust padding as needed */
-    }
-    #section2{
-      background: linear-gradient(to bottom, #b9ad9f8c, #aee4dd); /* Adjust gradient colors as needed */
-      padding: 50px 0;
-    }
-    #section3{
-      background: linear-gradient(to bottom, #adb99f6c, #dbaee4); /* Adjust gradient colors as needed */
-      padding: 50px 0;
-    }
-    #section4{
-    background: linear-gradient(to bottom, #b99fad4f, #e4aedd); /* Adjust gradient colors as needed */
-    padding: 50px 0;
-  }
-  .container-line {
-    border: 2px solid rgba(252, 38, 0, 0.438);
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: justify;
-  }
-  .section {
-    border: 2px solid #6a6d6c;
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: justify;
-  }
-  .twinkling-btn {
-    /* Add any styles for the button */
-    /* Example styles */
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  /* Keyframes for twinkling animation */
-  @keyframes twinkling {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  /* Apply the twinkling animation */
-  .twinkling-animation {
-    animation: twinkling 1s infinite;
-  }
-  
-  </style>
 </head>
-<body>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/Mayura5.jpg');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="index.html">It's ME</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="index.html">Home</a></li>
 
-
-  <header>
-    <!-- Colorful Tab with Name and Profile Photo -->
-    <div class="tab">
-      <div class="text-center">
-        <img src="assets/my_photo.jpg" class="profile-photo" alt="Your Photo">
-        <h1 class="name-header">MAYURA P</h1>
-        <p class="email">Email: <a href="mailto:mayurap1002@gmail.com" target="_blank">mayurap1002@gmail.com</a></p>
-        <ul class="social-icons">
-          <li><a href="https://www.facebook.com/Mayura.p.Bhat"><i class="fab fa-facebook-square"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/mayura-p-872087239/"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="https://www.instagram.com/mayura_pelthaje/"><i class="fab fa-instagram-square"></i></a></li>
-          <!-- Add more social media icons as needed -->
+              <li><a href="#about">Who I am</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#myworks">Projects</a></li>
+              <!-- <li><a href="pages/sidebar-right.html">Sidebar Right</a></li> -->
+              <!-- <li><a href="pages/basic-grid.html">Basic Grid</a></li> -->
+            </ul>
+          <!-- </li>
+          <li><a class="drop" href="#">Dropdown</a>
+            <ul>
+              <li><a href="#">Level 2</a></li>
+              <li><a class="drop" href="#">Level 2 + Drop</a>
+                <ul>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Level 2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Link Text</a></li>
+          <li><a href="#">Link Text</a></li> -->
         </ul>
-        <div class="text-center">
-          <!-- Twinkling button -->
-          <button id="pdfButton" class="btn btn-primary twinkling-btn">View PDF</button>
-        </div>
-    
-      </div>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear">
+    <article> 
+      <!-- ################################################################################################ -->
+      <h3 class="heading">MAYURA PELTHAJE</h3>
+      <p style="text-align: justify;">Embarking on an Endless Adventure: Unveiling the Wonders of Life Through Data-Driven Exploration and Insightful Discoveries</p>
+      <p class="font-x1 uppercase bold"></p>
+      <footer><a class="btn" href="#">Know More</a></footer>
+      <!-- ################################################################################################ -->
+    </article>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3" id="about">
+  <main class="hoc container clear"> 
+    <div class="sectiontitle">
+      <h6 class="heading">Who I am</h6>
     </div>
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+     <p style="text-align: justify;">Hi there! I'm <b>Mayura </b>from<b>  Pelthaje</b>, a passionate explorer, avid learner, and lover of all things adventurous. Growing up in Kasaragod, I was always curious about the world beyond my backyard. This curiosity led me on a journey across states, where I’ve hiked through lush jungles, dived into vibrant ponds, and wandered through bustling city streets.
 
-
-  </header>
-  <main>
-    <div class="container">
-      <div class="row">
-<!-- ... -->
-<div class="col-md-12">
-  <div class="container-line">
-    <h4 style="font-family:'Times New Roman', Times, serif;">CAREER OBJECTIVE:</h4>
-    <p style="font-family:'Courier New', Courier, monospace; text-align: justify;">
-      Intend to work with a leading research and development firm in demanding and challenging roles, thereby gaining relevant industry exposure and developing expertise in software development and consulting. Also, to strike a common chord between the organization's objective and self through a symbiotic relationship that captures versatility, excellence, and passion to grow in the future.
-    </p>
-  </div>
-</div>
-
-
-<div class="col-md-12">
-  <div class="container-line">
-    <h4 style="font-family:'Times New Roman', Times, serif;">ACADEMIC DETAILS:</h4>
-    <p style="font-family:'Courier New', Courier, monospace; text-align: justify;">
-      <!-- Example: -->
-      <strong>University :</strong> Visvesvaryya Technological University, Belagavi<br>
-      <strong>College :</strong> Vivekananda College of Engineering and Technology, Puttur<br>
-      <strong>Degree:</strong> Master of Computer Applications<br>
-      <strong>Year of Graduation:</strong>2023<br>
-      <!-- Add more academic details as needed -->
-    </p>
-  </div>
-</div>
-
-<div class="col-md-12 text-center">
-  <div class="container">
-    <h2 style="font-family:'Courier New', Courier, monospace; text-align: center;">PROJECTS:</h2>
-      <!-- Add more project details as needed -->
-    </p>
-  </div>
-</div>
-<!-- ... -->
-
-      </div>
-    </div>
-    <section class="bg-light p-5" id="some">
-      <div class="container">
-        <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-md-6 col-lg-6">
-                  <img src="assets/durga.png" class="d-block w-100 img-with-border img-desktop" alt="Concrete meets bricks">
-                  <div class="text-center mt-2 mb-2">
-                    <button onclick="scrollToSection('section1')" class="btn btn-primary">Durga Builders</button>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-6">
-                  <img src="assets/lrhr.png" class="d-block w-100 img-with-border img-desktop" alt="Light, white and tight Scandinavian design">
-                  <div class="text-center mt-2 mb-2">
-                    
-                    <button onclick="scrollToSection('section2')" class="btn btn-primary">Image resolution improvisation</button>
-                  
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-6 col-lg-6">
-                  <img src="assets/volcano.png" class="d-block w-100 img-with-border img-desktop" alt="White walls with designer chairs">
-                  <div class="text-center mt-2 mb-2">
-                    <button onclick="scrollToSection('section3')" class="btn btn-primary">Volcano Analysis</button>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-6">
-                  <img src="assets/pgr.png" class="d-block w-100 img-with-border img-desktop" alt="Modern living room">
-                  <div class="text-center mt-2 mb-2">
-                    <button onclick="scrollToSection('section4')" class="btn btn-primary">Grievance redressal web app</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Add more carousel items for additional photos -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="section1">
-      <div class="container">
-        <h2 style="font-family: 'Times New Roman', Times, serif;">Durga Builders and Environmental Solutions</h2>
-        <p style="font-family: 'Courier New', Courier, monospace;">Durga Builders and Environmental Services has adopted an uncompromising policy of providing quality housing and commercial/retail spaces over the last 37 years. Constantly evolving over four decades, Durga has pioneered new designs and introduced new building technologies with the sole aim of satisfying and delighting the customer. In turn, customers have handsomely rewarded us with unwavering loyalty and trust.
-  
-        Over the next few years Durga will expand its footprints into newer cities and bring to the customer more modern and sustainable buildings, while keeping its high standards of quality and ethical dealings unchanged</p>
-        <div class="row justify-content-center"> <!-- Center the content -->
-          <div class="col-md-6 text-center"> <!-- Set the column width and center the button -->
-            <a href="https://mayura1234.github.io/durgabuilders/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Click here to open website</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End of Section 1 -->
-  
-    <!-- Section 2 -->
-    <section class="section" id="section2">
-      <div class="container">
-        <h2 style="font-family: 'Times New Roman', Times, serif;">Image super-resolution</h2>
-        <p style="font-family: 'Courier New', Courier, monospace;">The project aims to develop a model which generates high definition images from the given
-        image. The objective is to enhance the resolution and quality of low resolution image to generate
-        attractive images with high resolution. The model is trained on a dataset of paired low and high
-        resolution images.</p>
-      </div>
-    </section>
-    <!-- End of Section 2 -->
-  
-    <!-- Section 3 -->
-    <section class="section" id="section3">
-      <div class="container">
-        <h2 style="font-family: 'Times New Roman', Times, serif;">Volcano Eruption analysis </h2>
-        <p style="font-family: 'Courier New', Courier, monospace;">The ultimate goal of the project is to provide a useful tool for predicting volcanic activity and
-        providing early warning to communities that may be affected. This has the potential to make a
-        significant contribution to the field of volcano eruption prediction and could have important
-        practical applications in helping to protect communities and prevent loss of life and property.</p>
-      </div>
-    </section>
-    <!-- End of Section 3 -->
-  
-    <!-- Section 4 -->
-    <section class="section" id="section4">
-      <div class="container">
-        <h2 style="font-family: 'Times New Roman', Times, serif;">Public Grievance Redressal App</h2>
-        <p style="font-family: 'Courier New', Courier, monospace;">The Public Grievance Redressal Portal is an online platform designed to facilitate the submission,
-        processing, and resolution of public complaints. The portal provides a user-friendly interface for
-        individuals to register, login, and report grievances they encounter in their daily lives. The system
-        incorporates three key roles: users, Grievance Routing Officers (ROs), and Grievance Redressal
-        Officers (GROs), each with distinct responsibilities and access levels.</p>
-      </div>
-    </section>
-
+      My love for exploration isn't just about seeing new places—it's about immersing myself in different cultures, connecting with people, and discovering the stories that make each place unique. </p><p style="text-align: justify;"> I'm capturing the perfect sunset on camera, writing about a heartwarming encounter with a local, or analyzing data to uncover hidden patterns, I find joy in every aspect of my journey.
+      
+      Photography is one of my greatest passions. Through the lens, I aim to capture the beauty and essence of the places I visit and the people I meet. Each photograph tells a story, preserving a moment in time that speaks to the heart of exploration.
+      
+     My core values of curiosity, openness, and empathy guide me in everything I do. Looking ahead, I'm excited to explore new destinations, embark on more adventures, and continue sharing my journey with you.
+      
+      Thank you for joining me on this incredible adventure! Feel free to reach out if you’d like to connect, collaborate, or simply chat about travel, photography, science, swimming, driving, and exploration. 
+      </p>
+    <ul class="nospace group services">
+      <li class="one_third first">
+        <article><a href="#"><i class="fa fa-2x fa-registered"></i></a>
+          <h6 class="heading font-x1">Suscipit urna quis</h6>
+          <p>Ipsum feugiat diam fermentum ornare proin blandit rhoncus eros nec vulputate aliquam tempus non dolor vitae finibus [&hellip;]</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-2x fa-renren"></i></a>
+          <h6 class="heading font-x1">Cursus sollicitudin</h6>
+          <p>Suscipit lacus eu posuere vehicula cras lacinia nunc libero feugiat tristique massa mattis quis donec eu porttitor consequat [&hellip;]</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-2x fa-resistance"></i></a>
+          <h6 class="heading font-x1">Phasellus blandit</h6>
+          <p>Felis proin hendrerit sapien ipsum quis accumsan ipsum vestibulum faucibus nunc rhoncus lectus non nunc dapibus congue [&hellip;]</p>
+        </article>
+      </li>
+      <li class="one_third first">
+        <article><a href="#"><i class="fa fa-2x fa-flash"></i></a>
+          <h6 class="heading font-x1">Dignissim tristique</h6>
+          <p>Vivamus sollicitudin metus cursus pulvinar posuere nam fringilla pretium fringilla vestibulum commodo sagittis elit dui rutrum velit [&hellip;]</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-2x fa-assistive-listening-systems"></i></a>
+          <h6 class="heading font-x1">Ante luctus malesuada</h6>
+          <p>At porta massa fringilla vitae elit donec tellus lorem rhoncus in orci et efficitur hendrerit erat nam porttitor duis eget dignissim [&hellip;]</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-2x fa-globe"></i></a>
+          <h6 class="heading font-x1">Erat mauris donec</h6>
+          <p>Lacus ut lorem rhoncus dictum sed nisl eros consequat vel velit et venenatis accumsan nibh sed sit amet turpis convallis [&hellip;]</p>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
   </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
 
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2" id="gallery">
+  <section class="hoc container clear">
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">The things I Love</h6>
+    </div>
 
-  <style>
-    /* Custom styles for mobile */
-    @media (max-width: 767px) {
-      .img-desktop {
-        border: 6px solid #20222791; /* Thin border for desktop */
-        margin-bottom: 10px; /* Add some space between images */
-      }
-    }
-  
-    /* Custom styles for desktop */
-    @media (min-width: 768px) {
-      .img-with-border {
-        border: 2px solid #18192073; /* Thick border for mobile */
-        margin-bottom: 10px; /* Add some space between images */
-      }
-    }
+    <div class="wrapper bgded overlay" style="background-image:url('');">
+      <div class="hoc container testimonials clear"> 
+        <!-- ################################################################################################ -->
+        <article><img src="images/demo/100x100.png" alt="">
+          <blockquote>Ridiculus mus nunc ut nisi sit amet tellus aliquam aliquet suspendisse sit amet lacus a felis sagittis fringilla at et nibh donec placerat luctus nisi nec malesuada.</blockquote>
+          <h6 class="heading font-x1">E. Doe</h6>
+          <em>Parturient montes nascetur</em></article>
+        <!-- ################################################################################################ -->
+      </div>
+    </div> <br>
 
-    .section {
-      border: 2px solid #66cdaa; /* Change border color */
-      border-radius: 15px; /* Apply rounded borders */
-      padding: 20px; /* Add some padding for content */
-      margin-bottom: 20px; /* Add space between sections */
-    }
-  </style>
+    <div class="group">
+      <div class="one_third first"><a class="imgover" href="#"><img src="images/demo/320x480.png" alt=""></a></div>
+      <div class="two_third">
+        <figure class="group">
+          <div class="one_half first btmspace-30"><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></div>
+          <div class="one_half btmspace-30"><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></div>
+          <div class="one_half first"><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></div>
+          <div class="one_half"><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></div>
+        </figure>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3" id="myworks">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">Lectus nulla facilisi</h6>
+    </div>
+    <div class="group">
+      <figure class="one_third first">
+        <ul class="nospace pricelist">
+          <li>&pound;<strong>80</strong> <em>pcm</em></li>
+          <li>Vulputate</li>
+          <li>Sed at odio ligula</li>
+          <li>Nisi lacus aliquam</li>
+          <li>Turpis feugiat ornare</li>
+          <li>Gravida ultricies</li>
+          <li class="last">Ipsum magna vivamus</li>
+          <li>
+            <p>(Save 50%)</p>
+            <p><a class="btn" href="#">Condimentum</a></p>
+          </li>
+        </ul>
+      </figure>
+      <figure class="one_third">
+        <ul class="nospace pricelist bargain">
+          <li>&pound;<strong>100</strong> <em>pcm</em></li>
+          <li>Suspendisse</li>
+          <li>Quis varius justo</li>
+          <li>Enim ac risus maecenas</li>
+          <li>A maximus ipsum</li>
+          <li>Nec eleifend velit</li>
+          <li class="last">Nullam in dolor</li>
+          <li>
+            <p>(Save 50%)</p>
+            <p><a class="btn" href="#">Condimentum</a></p>
+          </li>
+        </ul>
+      </figure>
+      <figure class="one_third">
+        <ul class="nospace pricelist">
+          <li>&pound;<strong>125</strong> <em>pcm</em></li>
+          <li>Tincidunt</li>
+          <li>Sit amet lacus</li>
+          <li>Lacinia vestibulum</li>
+          <li>At vestibulum orci</li>
+          <li>Sed elementum a</li>
+          <li class="last">Augue non consequat</li>
+          <li>
+            <p>(Save 50%)</p>
+            <p><a class="btn" href="#">Condimentum</a></p>
+          </li>
+        </ul>
+      </figure>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');">
+  <div class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <ul id="stats" class="nospace group">
+      <li class="one_quarter first"><a href="#"><i class="fa fa-3x fa-slack"></i></a>
+        <p>Vestibulum</p>
+        <p>12345</p>
+      </li>
+      <li class="one_quarter"><a href="#"><i class="fa fa-3x fa-sliders"></i></a>
+        <p>Pulvinar</p>
+        <p>12345</p>
+      </li>
+      <li class="one_quarter"><a href="#"><i class="fa fa-3x fa-slideshare"></i></a>
+        <p>Volutpat</p>
+        <p>12345</p>
+      </li>
+      <li class="one_quarter"><a href="#"><i class="fa fa-3x fa-snowflake-o"></i></a>
+        <p>Accumsan</p>
+        <p>12345</p>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">Institutions</h6>
+    </div>
+    <div class="group team">
+      <figure class="one_quarter first"><a class="imgover" href="#"><img src="images/demo/320x320.png" alt=""></a>
+        <figcaption>
+          <h6 class="heading">A. Doe</h6>
+          <em>Eu urna pretium</em>
+          <footer>
+            <ul class="faico clear">
+              <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+            </ul>
+          </footer>
+        </figcaption>
+      </figure>
+      <figure class="one_quarter"><a class="imgover" href="#"><img src="images/demo/320x320.png" alt=""></a>
+        <figcaption>
+          <h6 class="heading">B. Doe</h6>
+          <em>Ullamcorper aliquam</em>
+          <footer>
+            <ul class="faico clear">
+              <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+            </ul>
+          </footer>
+        </figcaption>
+      </figure>
+      <figure class="one_quarter"><a class="imgover" href="#"><img src="images/demo/320x320.png" alt=""></a>
+        <figcaption>
+          <h6 class="heading">C. Doe</h6>
+          <em>Id dolor in est</em>
+          <footer>
+            <ul class="faico clear">
+              <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+            </ul>
+          </footer>
+        </figcaption>
+      </figure>
+      <figure class="one_quarter"><a class="imgover" href="#"><img src="images/demo/320x320.png" alt=""></a>
+        <figcaption>
+          <h6 class="heading">D. Doe</h6>
+          <em>Dignissim tempus</em>
+          <footer>
+            <ul class="faico clear">
+              <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+            </ul>
+          </footer>
+        </figcaption>
+      </figure>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
 
-
-  <footer style="background-color: #000000; color: rgb(197, 151, 151); text-align: center; padding: 15px; border-top: 5px solid #fff;">
-    &copy; 2023 Mayura
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <div class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">never changing Future Plans</h6>
+    </div>
+    <ul class="nospace group latest">
+      <li class="one_third first">
+        <article>
+          <figure><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></figure>
+          <div class="txtwrap">
+            <h4 class="heading"><a href="#">Photography</a></h4>
+            <ul class="nospace meta">
+              <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+              <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
+            </ul>
+            <p>Imperdiet habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas nam ac tortor velit aenean [&hellip;]</p>
+          </div>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+          <figure><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></figure>
+          <div class="txtwrap">
+            <h4 class="heading"><a href="#">Travel</a></h4>
+            <ul class="nospace meta">
+              <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+              <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
+            </ul>
+            <p>Et dapibus dui in est aliquet ac laoreet vel sollicitudin vel nisl etiam sodales felis quis purus consequat tempor aenean [&hellip;]</p>
+          </div>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+          <figure><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></figure>
+          <div class="txtwrap">
+            <h4 class="heading"><a href="#">Wait for monsoon</a></h4>
+            <ul class="nospace meta">
+              <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+              <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
+            </ul>
+            <p>Posuere odio id vulputate lectus etiam ut tincidunt erat a placerat tortor nam quis lorem auctor interdum velit quis [&hellip;]</p>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="heading">Turpis nam sapien</h6>
+      <p>Bibendum ullamcorper cras imperdiet justo vitae odio dignissim porta maecenas vel ante pharetra.</p>
+      <p>Lorem facilisis rutrum in sed sem proin interdum lectus non laoreet tellus leo imperdiet.</p>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Pharetra a luctus</h6>
+      <nav>
+        <ul class="nospace">
+          <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </nav>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">A maximus lectus</h6>
+      <article>
+        <h2 class="nospace font-x1"><a href="#">Suspendisse potenti proin</a></h2>
+        <time class="font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+        <p>Tortor a erat aliquam a consequat augue a elementum ante donec luctus posuere mauris non tempus felis [&hellip;]</p>
+      </article>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Non sapien nunct</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Lectus pharetra quis arcu</a></li>
+        <li><a href="#">Sed facilisis tempor velit ut</a></li>
+        <li><a href="#">Et maximus lorem maximus</a></li>
+        <li><a href="#">Habitant morbi tristique</a></li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
   </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
 </body>
 </html>
