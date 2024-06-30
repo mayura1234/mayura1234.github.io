@@ -14,10 +14,57 @@ Licence URI: https://www.os-templates.com/template-terms
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
+
 <style>
   html {
     scroll-behavior: smooth;
   }
+
+  .group .imgover img {
+    filter: grayscale(0%);
+    transition: filter 0.5s ease-in-out;
+  }
+  
+  .group .imgover img:hover {
+    filter: grayscale(100%);
+  }
+  #imageGroup {
+    display: none; /* Hide images initially */
+  }
+
+  .group1 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  #mayura span {
+    display: inline-block;
+  }
+
+  #pelthaje {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid rgb(255, 0, 0);
+    animation: erase 3s steps(6, end) 1s infinite alternate, write 3s steps(6, end) 1s infinite alternate;
+    vertical-align: bottom;
+  }
+
+  @keyframes erase {
+    from { width: 80%; }
+    to { width: 0; }
+  }
+
+  @keyframes write {
+    from { width: 0; }
+    to { width: 80%; }
+  }
+
 </style>
 
 </head>
@@ -71,10 +118,12 @@ Licence URI: https://www.os-templates.com/template-terms
   <div id="pageintro" class="hoc clear">
     <article> 
       <!-- ################################################################################################ -->
-      <h3 class="heading">MAYURA PELTHAJE</h3>
+      <h3 class="heading" id="mayura">
+        <span>MAYURA  &nbsp;</span><span id="pelthaje">PELTHAJE</span>
+      </h3>
       <p style="text-align: justify;">Embarking on an Endless Adventure: Unveiling the Wonders of Life Through Data-Driven Exploration and Insightful Discoveries</p>
       <p class="font-x1 uppercase bold"></p>
-      <footer><a class="btn" href="#">Know More</a></footer>
+      <footer><a class="btn" href="#about">Know More</a></footer>
       <!-- ################################################################################################ -->
     </article>
   </div>
@@ -101,47 +150,9 @@ Licence URI: https://www.os-templates.com/template-terms
       
       Thank you for joining me on this incredible adventure! Feel free to reach out if you’d like to connect, collaborate, or simply chat about travel, photography, science, swimming, driving, and exploration. 
       </p>
-    <ul class="nospace group services">
-      <li class="one_third first">
-        <article><a href="#"><i class="fa fa-2x fa-registered"></i></a>
-          <h6 class="heading font-x1">Suscipit urna quis</h6>
-          <p>Ipsum feugiat diam fermentum ornare proin blandit rhoncus eros nec vulputate aliquam tempus non dolor vitae finibus [&hellip;]</p>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><i class="fa fa-2x fa-renren"></i></a>
-          <h6 class="heading font-x1">Cursus sollicitudin</h6>
-          <p>Suscipit lacus eu posuere vehicula cras lacinia nunc libero feugiat tristique massa mattis quis donec eu porttitor consequat [&hellip;]</p>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><i class="fa fa-2x fa-resistance"></i></a>
-          <h6 class="heading font-x1">Phasellus blandit</h6>
-          <p>Felis proin hendrerit sapien ipsum quis accumsan ipsum vestibulum faucibus nunc rhoncus lectus non nunc dapibus congue [&hellip;]</p>
-        </article>
-      </li>
-      <li class="one_third first">
-        <article><a href="#"><i class="fa fa-2x fa-flash"></i></a>
-          <h6 class="heading font-x1">Dignissim tristique</h6>
-          <p>Vivamus sollicitudin metus cursus pulvinar posuere nam fringilla pretium fringilla vestibulum commodo sagittis elit dui rutrum velit [&hellip;]</p>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><i class="fa fa-2x fa-assistive-listening-systems"></i></a>
-          <h6 class="heading font-x1">Ante luctus malesuada</h6>
-          <p>At porta massa fringilla vitae elit donec tellus lorem rhoncus in orci et efficitur hendrerit erat nam porttitor duis eget dignissim [&hellip;]</p>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><i class="fa fa-2x fa-globe"></i></a>
-          <h6 class="heading font-x1">Erat mauris donec</h6>
-          <p>Lacus ut lorem rhoncus dictum sed nisl eros consequat vel velit et venenatis accumsan nibh sed sit amet turpis convallis [&hellip;]</p>
-        </article>
-      </li>
-    </ul>
+    
     <!-- ################################################################################################ -->
     <!-- / main body -->
-    <div class="clear"></div>
   </main>
 </div>
 <!-- ################################################################################################ -->
@@ -152,33 +163,42 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row2" id="gallery">
-  <section class="hoc container clear">
+  <section class="hoc container clear" style="padding-top:10px;">
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <h6 class="heading">The things I Love</h6>
     </div>
 
-    <div class="wrapper bgded overlay" style="background-image:url('');">
-      <div class="hoc container testimonials clear"> 
+    <div class="wrapper bgded overlay" style="background-image:url('images/demo/gallery/img3.jpg');">
+      <div class="hoc container testimonials clear">
         <!-- ################################################################################################ -->
-        <article><img src="images/demo/100x100.png" alt="">
-          <blockquote>Ridiculus mus nunc ut nisi sit amet tellus aliquam aliquet suspendisse sit amet lacus a felis sagittis fringilla at et nibh donec placerat luctus nisi nec malesuada.</blockquote>
-          <h6 class="heading font-x1">E. Doe</h6>
-          <em>Parturient montes nascetur</em></article>
+        <article>
+          <img src="" alt="">
+          <blockquote style="text-align: justify;">Water holds a unique allure, offering tranquility in a quiet lake, adventure in the open sea, and mystery in the depths of underwater worlds. It serves as a sanctuary, providing peace and a deep connection to nature. Whether one is swimming, exploring, or simply enjoying its presence, water enriches life with its ever-changing beauty and boundless opportunities for discovery.</blockquote>
+          <h6 class="heading font-x1">agree....?</h6>
+          <em> </em></article>
         <!-- ################################################################################################ -->
+        <blockquote style="text-align: justify;"></h6>
       </div>
     </div> <br>
 
-    <div class="group">
-      <div class="one_third first"><a class="imgover" href="#"><img src="images/demo/320x480.png" alt=""></a></div>
+    <button id="toggleButton" class="btn" onclick="toggleImages()">Want to see Images ?</button>
+
+    <div id="imageGroup">
+      <div class="one_third first"><a class="imgover" href=""><img src="images/demo/gallery/img2.jpg" alt=""></a></div>
       <div class="two_third">
         <figure class="group">
-          <div class="one_half first btmspace-30"><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></div>
-          <div class="one_half btmspace-30"><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></div>
-          <div class="one_half first"><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></div>
-          <div class="one_half"><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></div>
+          <div class="one_half first btmspace-30"><a class="imgover" href=""><img src="images/demo/gallery/img4.jpg" alt=""></a></div>
+          <div class="one_half btmspace-30"><a class="imgover" href=""><img src="images/demo/gallery/Mayura.png" alt=""></a></div>
+          <div class="one_half first btmspace-30"><a class="imgover" href=""><img src="images/demo/gallery/Mayura2.jpg" alt=""></a></div>
+          <div class="one_half  btmspace-30"><a class="imgover" href=""><img src="images/demo/gallery/water.jpg" alt=""></a></div>
+          <div class="one_half first btmspace-30"><a class="imgover" href=""><img src="images/demo/gallery/bus.jpg" alt=""></a></div>
+          <div class="one_half  btmspace-30"><a class="imgover" href=""><img src="images/demo/gallery/bus2.jpg" alt=""></a></div>
+          
+          
         </figure>
       </div>
+      <button id="toggleButtonBottom" class="btn" style="display: none;" onclick="toggleImages()">Show Less</button>
     </div>
     <!-- ################################################################################################ -->
   </section>
@@ -279,10 +299,10 @@ Licence URI: https://www.os-templates.com/template-terms
       <h6 class="heading">Institutions</h6>
     </div>
     <div class="group team">
-      <figure class="one_quarter first"><a class="imgover" href="#"><img src="images/demo/320x320.png" alt=""></a>
+      <figure class="one_quarter first"><a class="imgover" href="#"><img src="images/demo/gallery/perla.jpg" alt=""></a>
         <figcaption>
-          <h6 class="heading">A. Doe</h6>
-          <em>Eu urna pretium</em>
+          <h6 class="heading">S . N  High School</h6>
+          <em>Perla</em>
           <footer>
             <ul class="faico clear">
               <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -293,10 +313,10 @@ Licence URI: https://www.os-templates.com/template-terms
           </footer>
         </figcaption>
       </figure>
-      <figure class="one_quarter"><a class="imgover" href="#"><img src="images/demo/320x320.png" alt=""></a>
+      <figure class="one_quarter"><a class="imgover" href="#"><img src="images/demo/gallery/vittal.jpg" alt=""></a>
         <figcaption>
-          <h6 class="heading">B. Doe</h6>
-          <em>Ullamcorper aliquam</em>
+          <h6 class="heading">Vittal PU College</h6>
+          <em>Vittal</em>
           <footer>
             <ul class="faico clear">
               <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -307,10 +327,10 @@ Licence URI: https://www.os-templates.com/template-terms
           </footer>
         </figcaption>
       </figure>
-      <figure class="one_quarter"><a class="imgover" href="#"><img src="images/demo/320x320.png" alt=""></a>
+      <figure class="one_quarter"><a class="imgover" href="#"><img src="images/demo/gallery/philomena.JPG" alt=""></a>
         <figcaption>
-          <h6 class="heading">C. Doe</h6>
-          <em>Id dolor in est</em>
+          <h6 class="heading">St Philomena College</h6>
+          <em>Puttur</em>
           <footer>
             <ul class="faico clear">
               <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -321,10 +341,10 @@ Licence URI: https://www.os-templates.com/template-terms
           </footer>
         </figcaption>
       </figure>
-      <figure class="one_quarter"><a class="imgover" href="#"><img src="images/demo/320x320.png" alt=""></a>
+      <figure class="one_quarter"><a class="imgover" href="#"><img src="images/demo/gallery/vcet.jpg" alt=""></a>
         <figcaption>
-          <h6 class="heading">D. Doe</h6>
-          <em>Dignissim tempus</em>
+          <h6 class="heading">VCET</h6>
+          <em>Puttur</em>
           <footer>
             <ul class="faico clear">
               <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -355,7 +375,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <ul class="nospace group latest">
       <li class="one_third first">
         <article>
-          <figure><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></figure>
+          <figure><a class="imgover" href="#"><img src="images/demo/gallery/photo.jpg" alt=""></a></figure>
           <div class="txtwrap">
             <h4 class="heading"><a href="#">Photography</a></h4>
             <ul class="nospace meta">
@@ -383,7 +403,7 @@ Licence URI: https://www.os-templates.com/template-terms
         <article>
           <figure><a class="imgover" href="#"><img src="images/demo/320x220.png" alt=""></a></figure>
           <div class="txtwrap">
-            <h4 class="heading"><a href="#">Wait for monsoon</a></h4>
+            <h4 class="heading"><a href="#">Waiting for monsoon</a></h4>
             <ul class="nospace meta">
               <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
               <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
@@ -465,6 +485,24 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
+
+<script>
+  function toggleImages() {
+    var group = document.getElementById('imageGroup');
+    var btnTop = document.getElementById('toggleButton');
+    var btnBottom = document.getElementById('toggleButtonBottom');
+    if (group.style.display === "none" || group.style.display === "") {
+      group.style.display = "block";
+      btnTop.style.display = "none";
+      btnBottom.style.display = "block";
+    } else {
+      group.style.display = "none";
+      btnTop.style.display = "block";
+      btnBottom.style.display = "none";
+    }
+  }
+</script>
+
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
