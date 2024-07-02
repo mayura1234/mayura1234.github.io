@@ -76,7 +76,237 @@ Licence URI: https://www.os-templates.com/template-terms
     to { width: 80%; }
   }
 
+
+/*Navbar*/
+
+/* Existing styles */
+
+/* Navigation */
+nav ul, nav ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#mainav, #breadcrumb, .sidebar nav {
+  line-height: normal;
+}
+
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after {
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 10px;
+  line-height: 10px;
+}
+
+#mainav {}
+#mainav ul {
+  text-transform: uppercase;
+}
+#mainav ul ul {
+  z-index: 9999;
+  position: absolute;
+  width: 180px;
+  text-transform: none;
+}
+#mainav ul ul ul {
+  left: 180px;
+  top: 0;
+}
+#mainav li {
+  display: inline-block;
+  position: relative;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+#mainav li:last-child {
+  margin-right: 0;
+}
+#mainav li li {
+  width: 100%;
+  margin: 0;
+}
+#mainav li a {
+  display: block;
+  padding: 30px 0;
+}
+#mainav li li a {
+  border: solid;
+  border-width: 0 0 1px 0;
+}
+#mainav .drop {
+  padding-left: 15px;
+}
+#mainav li li a, #mainav li li .drop {
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+}
+#mainav .drop::after, #mainav li li .drop::after {
+  content: "\f0d7";
+}
+#mainav .drop::after {
+  top: 35px;
+  left: 5px;
+}
+#mainav li li .drop::after {
+  top: 15px;
+  left: 5px;
+}
+#mainav ul ul {
+  visibility: hidden;
+  opacity: 0;
+}
+#mainav ul li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+#mainav form {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+#mainav form select, #mainav form select option {
+  display: block;
+  cursor: pointer;
+  outline: none;
+}
+#mainav form select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid;
+}
+#mainav form select option {
+  margin: 5px;
+  padding: 0;
+  border: none;
+}
+
+/* Breadcrumb */
+#breadcrumb {
+  padding: 120px 0 15px;
+}
+#breadcrumb ul {
+  margin: 0 0 30px 0;
+  padding: 0 0 8px 0;
+  list-style: none;
+  text-transform: uppercase;
+}
+#breadcrumb li {
+  display: inline-block;
+  margin: 0 6px 0 0;
+  padding: 0;
+}
+#breadcrumb li a {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0 12px 0 0;
+  font-size: 12px;
+}
+#breadcrumb li a::after {
+  top: 3px;
+  right: 0;
+  content: "\f101";
+}
+#breadcrumb li:last-child a {
+  margin: 0;
+  padding: 0;
+}
+#breadcrumb li:last-child a::after {
+  display: none;
+}
+
+/* Sidebar Navigation */
+.sidebar nav {
+  display: block;
+  width: 100%;
+}
+.sidebar nav li {
+  margin: 0 0 3px 0;
+  padding: 0;
+}
+.sidebar nav a {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 5px 10px 5px 15px;
+  text-decoration: none;
+  border: solid;
+  border-width: 0 0 1px 0;
+}
+.sidebar nav a::after {
+  top: 9px;
+  left: 5px;
+  content: "\f101";
+}
+.sidebar nav ul ul a {
+  padding-left: 35px;
+}
+.sidebar nav ul ul a::after {
+  left: 25px;
+}
+.sidebar nav ul ul ul a {
+  padding-left: 55px;
+}
+.sidebar nav ul ul ul a::after {
+  left: 45px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+  }
+
+  #mainav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: solid 1px #ddd;
+  }
+
+  #mainav ul.open {
+    display: flex;
+  }
+
+  #mainav li {
+    display: block;
+    width: 100%;
+  }
+
+  #mainav li a {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/* Hide the nav-toggle button on desktop */
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
 </style>
+
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('#mainav ul').classList.toggle('open');
+  });
+</script>
+
 
 </head>
 <body id="top">
@@ -89,35 +319,17 @@ Licence URI: https://www.os-templates.com/template-terms
   <div class="wrapper row1">
     <header id="header" class="hoc clear"> 
       <!-- ################################################################################################ -->
-      <div id="logo" class="fl_left">
-        <h1><a href="index.html">It's ME</a></h1>
-      </div>
       <nav id="mainav" class="fl_right">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
         <ul class="clear">
           <li class="active"><a href="index.html">Home</a></li>
-
-              <li><a href="#about">Who I am</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#myworks">Projects</a></li>
-              <!-- <li><a href="pages/sidebar-right.html">Sidebar Right</a></li> -->
-              <!-- <li><a href="pages/basic-grid.html">Basic Grid</a></li> -->
-            </ul>
-          <!-- </li>
-          <li><a class="drop" href="#">Dropdown</a>
-            <ul>
-              <li><a href="#">Level 2</a></li>
-              <li><a class="drop" href="#">Level 2 + Drop</a>
-                <ul>
-                  <li><a href="#">Level 3</a></li>
-                  <li><a href="#">Level 3</a></li>
-                  <li><a href="#">Level 3</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Level 2</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Link Text</a></li>
-          <li><a href="#">Link Text</a></li> -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#myworks">Works</a></li>
+          <li><a href="#institutions">School</a></li>
+          <li><a href="#plans">Plans</a></li>
         </ul>
       </nav>
       <!-- ################################################################################################ -->
@@ -302,14 +514,14 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row2">
+<div class="wrapper row2" style="text-align: center;" id="institutions">
   <section class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <h6 class="heading">Institutions</h6>
     </div>
     <div class="group team" style="text-align: center;">
-      <figure class="one_quarter first"><a class="imgover" href="#"><img src="images/demo/gallery/perla.jpg" alt=""></a>
+      <figure class="one_quarter first" ><a class="imgover" href="#"><img src="images/demo/gallery/perla.jpg" alt=""></a>
         <figcaption>
           <h6 class="heading">S . N  High School</h6>
           <em>Perla</em>
@@ -376,7 +588,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row3">
+<div class="wrapper row3" id="plans">
   <div class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
@@ -433,21 +645,21 @@ Licence URI: https://www.os-templates.com/template-terms
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div class="one_quarter first">
-      <h6 class="heading">Turpis nam sapien</h6>
-      <p>Bibendum ullamcorper cras imperdiet justo vitae odio dignissim porta maecenas vel ante pharetra.</p>
-      <p>Lorem facilisis rutrum in sed sem proin interdum lectus non laoreet tellus leo imperdiet.</p>
+      <h6 class="heading">Let's Connect</h6>
+      <p style="text-align: justify;">Thank you for visiting here. I hope you enjoyed exploring my journey and passions. </p>
+      <p style="text-align: justify;">If you'd like to connect, follow me on social media or drop me a message. Let's keep the conversation going!</p>
     </div>
     <div class="one_quarter">
-      <h6 class="heading">Pharetra a luctus</h6>
+      <h6 class="heading">You can Follow </h6>
       <nav>
         <ul class="nospace">
           <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Cookies</a></li>
-          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#about">About</a></li>
+          <!-- <li><a href="#">Contact</a></li> -->
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#myworks">My Works</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <!-- <li><a href="#">Disclaimer</a></li> -->
         </ul>
       </nav>
       <ul class="faico clear">
