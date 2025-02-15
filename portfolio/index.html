@@ -9,9 +9,6 @@
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
 
-
-
-
 <style>
   
 
@@ -111,6 +108,71 @@
     font-size: small;
   }
   
+  /* Circular Cursor */
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 0, 0, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 0, 0, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-out;
+  z-index: 9998;
+}
+
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Preloader Spinner */
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 0, 0, 0.3);
+  border-top: 5px solid rgb(255, 0, 0);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Fade-in Animation */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 </style>
 
@@ -120,8 +182,6 @@
 
 </head>
 <body id="top" class="montserrat-regular">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
 <div class="bgded overlay" style="background-image:url('images/demo/gallery/Me3.jpg');"> 
@@ -140,22 +200,6 @@
               <li><a href="#plans">Plans</a></li>
               <!-- <li><a href="pages/basic-grid.html">Basic Grid</a></li> -->
             </ul>
-          <!-- </li>
-          <li><a class="drop" href="#">Dropdown</a>
-            <ul>
-              <li><a href="#">Level 2</a></li>
-              <li><a class="drop" href="#">Level 2 + Drop</a>
-                <ul>
-                  <li><a href="#">Level 3</a></li>
-                  <li><a href="#">Level 3</a></li>
-                  <li><a href="#">Level 3</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Level 2</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Link Text</a></li>
-          <li><a href="#">Link Text</a></li> -->
       </nav>
       <!-- ################################################################################################ -->
     </header>
@@ -178,9 +222,6 @@
   <!-- ################################################################################################ -->
 </div>
 <!-- End Top Background Image Wrapper -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row3" id="about" style="background-color: rgb(0, 0, 0); color:white;">
   <main class="hoc container clear"> 
     <div class="sectiontitle">
@@ -195,12 +236,6 @@
     <!-- / main body -->
   </main>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row2" id="gallery" style="background-color: rgb(31, 31, 31); color:white;">
   <section class="hoc container clear" style="padding-top:10px;">
@@ -244,9 +279,6 @@
   </section>
 </div>
 <!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
 
 <div class="wrapper row3 " id="myworks" style="background-color: rgb(2, 2, 2); color:white;">
 
@@ -270,57 +302,8 @@
           
         </figure>
       </div>
-  
-    
-
-
-    <!-- <div class="group"style="color:black;">
-      <figure class="one_third first">
-        <ul class="nospace pricelist"style="border-radius: 10px;">
-          <li><strong>1</strong> <br><em>Internship</em></li>
-          <li>BEL Software SBU</li>
-          <li style="text-align: justify;">Worked as Internship Trainee at <b>Bharath Electronics Limited</b>, and developed a web based platform for citizen complaint submission and tracking. So that I had an opportunity to learn technologies like Springboot and React JS.</li>
-          
-         
-          <li>
-            <p>Springboot, React JS</p>
-            
-          </li>
-        </ul>
-      </figure>
-      <figure class="one_third">
-        <ul class="nospace pricelist bargain"style="border-radius: 10px;">
-          <li><strong>2</strong> <br><em>Jr. Web Developer</em></li>
-          <li>An Idea Tech</li>
-          <li style="text-align: justify;">Worked as junior web developer, and handled development of Websites and Web applications. During this period I tried to enhance my front end development skills, by using technologies like HTML, CSS, JS, Bootstrap, JQuery etc. </li>
-
-          
-          <li>
-            <p>HTML, JS, CSS </p>
-            
-          </li>
-        </ul>
-      </figure>
-      <figure class="one_third">
-        <ul class="nospace pricelist"style="border-radius: 10px;">
-          <li><strong>3</strong><br> <em>Software Developer</em></li>
-          <li>Emdescol Pvt. Ltd</li>
-          <li style="text-align: justify;"> As a software developer, my responsibility is to learn and develop applications using WinForms and WPF. This includes UI development, optimising applications by implementing parallelism, concurrency, maintaining MVVM architectural pattern etc . </li>
-
-          
-          <li>
-            <p>.NET , C#</p>
-            
-          </li>
-        </ul>
-      </figure>
-    </div> -->
-    <!-- ################################################################################################ -->
-    
   </section>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper bgded overlay" style="background-image:url('images/demo/gallery/nature.jpg');">
   <div class="hoc container clear"> 
@@ -346,8 +329,6 @@
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row2" id="institutions" style="background-color: rgb(0, 0, 0); color:white;">
   <section class="hoc container clear"> 
@@ -417,12 +398,6 @@
   </section>
 </div>
 <!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row3" id="plans" style="background-color: rgb(31, 31, 31); color:white;">
   <div class="hoc container clear">
     <!-- ################################################################################################ -->
@@ -473,8 +448,6 @@
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row4" style="background-color: rgb(0, 0, 0); color:white;">
   <footer id="footer" class="hoc clear"> 
@@ -548,8 +521,6 @@
   </footer>
 </div>
 <!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
@@ -558,8 +529,6 @@
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
@@ -579,6 +548,54 @@
       btnBottom.style.display = "none";
     }
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const cursor = document.createElement("div");
+  cursor.classList.add("cursor");
+  document.body.appendChild(cursor);
+
+  const trail = document.createElement("div");
+  trail.classList.add("cursor-trail");
+  document.body.appendChild(trail);
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    setTimeout(() => {
+      trail.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    }, 50);
+  });
+
+  // Ensure it works on touch devices too
+  document.addEventListener("touchmove", (e) => {
+    let touch = e.touches[0];
+    cursor.style.transform = `translate(${touch.clientX}px, ${touch.clientY}px)`;
+    setTimeout(() => {
+      trail.style.transform = `translate(${touch.clientX}px, ${touch.clientY}px)`;
+    }, 50);
+  });
+});
+
+
+</script>
+
+<script>
+   // Preloader Fade-Out
+   window.addEventListener("load", function () {
+    document.getElementById("preloader").classList.add("fade-out");
+  });
+
+  // Lazy Load Sections
+  const sections = document.querySelectorAll(".section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
 </script>
 
 <script src="layout/scripts/jquery.min.js"></script>
