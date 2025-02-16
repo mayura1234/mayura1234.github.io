@@ -492,7 +492,7 @@ html {
           <li><a href="#about">About</a></li>
           <!-- <li><a href="#">Contact</a></li> -->
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#myworks">My Works</a></li>
+          <li><a href="#myworks">Favourites</a></li>
           <li><a href="#plans">Plans</a></li>
           <!-- <li><a href="#">Disclaimer</a></li> -->
         </ul>
@@ -561,21 +561,24 @@ html {
 <!-- JAVASCRIPTS -->
 
 <script>
-  function toggleImages() {
+ function toggleImages() {
     var group = document.getElementById('imageGroup');
     var btnTop = document.getElementById('toggleButton');
     var btnBottom = document.getElementById('toggleButtonBottom');
-    if (group.style.display === "none" || group.style.display === "") {
-      group.style.display = "block";
-      btnTop.style.display = "none";
-      btnBottom.style.display = "block";
-    } else {
-      group.style.display = "none";
-      btnTop.style.display = "block";
-      btnBottom.style.display = "none";
-    }
-  }
 
+    if (group.style.display === "none" || group.style.display === "") {
+        group.style.display = "block";
+        btnTop.style.display = "none";
+        btnBottom.style.display = "block";
+    } else {
+        group.style.display = "none";
+        btnTop.style.display = "block";
+        btnBottom.style.display = "none";
+
+        // Scroll back to the top toggle button smoothly
+        btnTop.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
 
 
 </script>
