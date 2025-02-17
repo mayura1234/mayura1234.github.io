@@ -195,6 +195,14 @@ html {
   }
 }
 
+.zoomable {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.zoomable:active {
+  transform: scale(1.5); /* Zoom-in effect */
+}
 
 </style>
 
@@ -287,21 +295,20 @@ html {
     <button id="toggleButton" class="btn" onclick="toggleImages()" style="border-radius: 5px;">Want to see my weakness ?</button>
 
     <div id="imageGroup">
-      <div class="one_third first"><a class="imgover" href="#gallery"><img src="images/demo/gallery/home2.jpg" alt=""style="border-radius: 5px;"></a></div>
+      <div class="one_third first"><img class="zoomable" src="images/demo/gallery/home2.jpg" alt="" style="border-radius: 10px;"></div>
       <div class="two_third">
         <figure class="group">
-          <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/img4.jpg" alt="" style="border-radius: 5px;"></a></div>
-          <div class="one_half btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/joga.jpg" alt="" style="border-radius: 5px;"></a></div>
-          <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/Mayura2.jpg" alt=""style="border-radius: 5px;"></a></div>
-          <div class="one_half  btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/water.jpg" alt=""style="border-radius: 5px;"></a></div>
-          <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/bus.jpg" alt=""style="border-radius: 5px;"></a></div>
-          <div class="one_half  btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/mohanlal.webp" alt=""style="border-radius: 5px;"></a></div>
-          
-          
+          <div class="one_half first btmspace-30"><img class="zoomable" src="images/demo/gallery/img4.jpg" alt="" style="border-radius: 10px;"></div>
+          <div class="one_half btmspace-30"><img class="zoomable" src="images/demo/gallery/joga.jpg" alt="" style="border-radius: 10px;"></div>
+          <div class="one_half first btmspace-30"><img class="zoomable" src="images/demo/gallery/Mayura2.jpg" alt="" style="border-radius: 10px;"></div>
+          <div class="one_half btmspace-30"><img class="zoomable" src="images/demo/gallery/water.jpg" alt="" style="border-radius: 10px;"></div>
+          <div class="one_half first btmspace-30"><img class="zoomable" src="images/demo/gallery/bus.jpg" alt="" style="border-radius: 10px;"></div>
+          <div class="one_half btmspace-30"><img class="zoomable" src="images/demo/gallery/mohanlal.webp" alt="" style="border-radius: 10px;"></div>
         </figure>
       </div>
-      <button id="toggleButtonBottom" class="btn" style="display: none;" onclick="toggleImages()" style="border-radius: 5px;">Show Less</button>
+      <button id="toggleButtonBottom" class="btn" style="display: none; border-radius: 5px;" onclick="toggleImages()">Show Less</button>
     </div>
+    
     <!-- ################################################################################################ -->
   </section>
 </div>
@@ -608,9 +615,12 @@ html {
     sections.forEach((section) => {
       const sectionPos = section.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
+      const sectionBottom = section.getBoundingClientRect().bottom;
       
-      if (sectionPos < windowHeight - 50) {
+      if (sectionPos < windowHeight - 50 && sectionBottom > 50) {
         section.classList.add("visible");
+      }else {
+        section.classList.remove("visible"); // Remove if scrolled out
       }
     });
   };
@@ -622,6 +632,21 @@ html {
   setTimeout(() => {
     document.getElementById("preloader")?.classList.add("fade-out");
   }, 1500); // Adjust as needed
+});
+
+//image effect
+document.querySelectorAll('.zoomable').forEach(img => {
+  img.addEventListener('mousedown', () => {
+    img.style.transform = 'scale(2.5)';
+  });
+
+  img.addEventListener('mouseup', () => {
+    img.style.transform = 'scale(1)';
+  });
+
+  img.addEventListener('mouseleave', () => {
+    img.style.transform = 'scale(1)';
+  });
 });
 
 
