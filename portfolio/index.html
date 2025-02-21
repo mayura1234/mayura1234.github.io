@@ -88,7 +88,6 @@ html {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: small;
 }
 
 /* ✅ Fixed Preloader Transition */
@@ -195,6 +194,54 @@ html {
   }
 }
 
+.scrolling-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: linear-gradient(135deg, #ff3939, #fc1717);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  animation: changeColor 1s infinite alternate, bounce 1s infinite ease-in-out;
+}
+
+/* Smooth color change effect */
+@keyframes changeColor {
+  0% { color: #ffffff; }
+  50% { color: #ffeb3b; }
+  100% { color: #ffffff; }
+}
+
+/* Up-down bouncing effect */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+}
+
+.scrolling-animation2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff0000, #fc1717);
+  height: 8vh;
+  animation: changeColor 3s infinite alternate, bounce 3s infinite ease-in-out;
+}
+
+/* Smooth color change effect */
+@keyframes changeColor {
+  0% { color: #ffffff; }
+  50% { color: #e97676; }
+  100% { color: #ffffff; }
+}
+
+/* Up-down bouncing effect */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
 
 </style>
 
@@ -284,40 +331,25 @@ html {
       </div>
     </div> <br>
 
-    <button id="toggleButton" class="btn" onclick="toggleImages()" style="border-radius: 5px;">Uncover it now...click and scroll</button>
 
-<div id="imageGroup">
-      <div class="one_third first"><a class="imgover" href="#gallery"><img src="images/demo/gallery/home2.jpg" alt=""style="border-radius: 5px;"></a></div>
-      <div class="two_third">
-        <figure class="group">
-          <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/img4.jpg" alt="" style="border-radius: 5px;"></a></div>
-          <div class="one_half btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/joga.jpg" alt="" style="border-radius: 5px;"></a></div>
-          <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/Mayura2.jpg" alt=""style="border-radius: 5px;"></a></div>
-          <div class="one_half  btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/water.jpg" alt=""style="border-radius: 5px;"></a></div>
-          <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/bus.jpg" alt=""style="border-radius: 5px;"></a></div>
-          <div class="one_half  btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/mohanlal.webp" alt=""style="border-radius: 5px;"></a></div>
-          
-          
-        </figure>
-      </div>
-      <button id="toggleButtonBottom" class="btn" style="display: none;" onclick="toggleImages()" style="border-radius: 5px;">Show Less</button>
-    </div>
-    
     <!-- ################################################################################################ -->
   </section>
 </div>
 <!-- ################################################################################################ -->
+<section class="scrolling-animation">
+  <i class="fa fa-chevron-down"></i>
+</section>
+
 
 <div class="wrapper row3 " id="myworks" style="background-color: rgb(2, 2, 2); color:white;">
-
+  
   <section class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <h6 class="heading">Works I found Interesting</h6>
     </div>
 
-    
-      <div class="one_third first"><a class="imgover" href="#gallery"><img src="images/demo/gallery/Thinkal.jpg" alt=""style="border-radius: 5px;"></a></div>
+    <div class="one_third first"><a class="imgover" href="#gallery"><img src="images/demo/gallery/Thinkal.jpg" alt=""style="border-radius: 5px;"></a></div>
       <div class="two_third">
         <figure class="group">
           <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/Mahesh.jpg" alt="" style="border-radius: 5px;"></a></div>
@@ -371,25 +403,46 @@ html {
       </li>
       
     </ul>
-    <!-- ################################################################################################ -->
   </div>
 </div>
 <!-- ################################################################################################ -->
-<div class="wrapper row2" id="institutions" style="background-color: rgb(0, 0, 0); color:white;">
+
+
+ <div style="background-color: black;">
   <section class="hoc container clear"> 
-    <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <h6 class="heading">Institutions</h6>
+      <h6 class="heading">Gallery</h6>
     </div>
-    <div class="group team" style="text-align: center;">
-      <figure class="one_quarter first"><a class="imgover" href="#institutions"><img style="text-align:center;border-radius: 5px;"src="images/demo/gallery/perla.jpg" alt=""></a>
+
+      <p style="text-align: justify;">This gallery is a glimpse into my world—my favorite captures and the things that mean the most to me. Hope you enjoy them as much as I do! Just uncover it now...click and scroll</p><br>
+      <div style="display: flex; justify-content: center;">
+        <button class="scrolling-animation2" id="toggleButton" onclick="toggleImages()" style="border-radius: 10px; font-weight: bold;">Click and Scroll</button>
+      </div>
+
+      <div id="imageGroup">
+            <div class="one_third first"><a class="imgover" href="#gallery"><img src="images/demo/gallery/home2.jpg" alt=""style="border-radius: 5px;"></a></div>
+            <div class="two_third">
+              <figure class="group">
+                <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/img4.jpg" alt="" style="border-radius: 5px;"></a></div>
+                <div class="one_half btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/joga.jpg" alt="" style="border-radius: 5px;"></a></div>
+                <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/Mayura2.jpg" alt=""style="border-radius: 5px;"></a></div>
+                <div class="one_half  btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/water.jpg" alt=""style="border-radius: 5px;"></a></div>
+                <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/bus.jpg" alt=""style="border-radius: 5px;"></a></div>
+                <div class="one_half  btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/mohanlal.webp" alt=""style="border-radius: 5px;"></a></div>
+                
+                
+              </figure>
+            </div>
+            <button id="toggleButtonBottom" class="btn" style="display: none;" onclick="toggleImages()" style="border-radius: 5px;">Show Less</button>
+          </div>
+
+      <!-- <figure class="one_quarter first"><a class="imgover" href="#institutions"><img style="text-align:center;border-radius: 5px;"src="images/demo/gallery/perla.jpg" alt=""></a>
         <figcaption>
           <h6 class="heading">S . N  High School</h6>
           <em>Perla</em>
           <footer>
             <ul class="faico clear">
               <li><a class="faicon-twitter" href="https://www.facebook.com/SNHSPERLA/"><i class="fa fa-facebook"></i></a></li>
-              <!-- <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li> -->
               <li><a class="faicon-google-plus" href="https://www.google.com/search?q=SNHS+Perla&client=firefox-b-d&sca_esv=6de66992da2ba51e&sxsrf=ADLYWIKK0DkR2kadR3mL_cbjpGJy2EtUMw%3A1719840779548&ei=C7CCZtiKIfet4-EP1ZyImA8&ved=0ahUKEwiYvPCV-oWHAxX31jgGHVUOAvMQ4dUDCBA&uact=5&oq=SNHS+Perla&gs_lp=Egxnd3Mtd2l6LXNlcnAiClNOSFMgUGVybGEyChAjGIAEGCcYigUyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIESNoJUOYDWLYGcAF4AJABAJgBmAKgAZgEqgEDMi0yuAEDyAEA-AEBmAIDoAKnBMICCBAAGIAEGLADwgILEAAYgAQYsAMYogTCAgcQIxiwAhgnmAMAiAYBkAYFkgcFMS4wLjKgB6II&sclient=gws-wiz-serp"><i class="fa fa-google"></i></a></li>
               <li><a class="faicon-vk" href="https://www.youtube.com/watch?app=desktop&v=zX77MJZ6blA"><i class="fa fa-youtube"></i></a></li>
             </ul>
@@ -437,11 +490,11 @@ html {
             </ul>
           </footer>
         </figcaption>
-      </figure>
-    </div>
-    <!-- ################################################################################################ -->
+      </figure> --> 
   </section>
 </div>
+ 
+
 <!-- ################################################################################################ -->
 <div class="wrapper row3" id="plans" style="background-color: rgb(31, 31, 31); color:white;">
   <div class="hoc container clear">
@@ -597,7 +650,6 @@ html {
         btnTop.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
-
 
 </script>
 
