@@ -66,22 +66,8 @@ html {
   to { width: 80%; }
 }
 
-/* Responsive Design */
-@media(max-width:425px) {
-  #copyright, #footer {
-    text-align: center;
-  }
-  #institutions {
-    padding-left: 32px;
-  }
-}
 
-@media (max-width: 425px), (max-width: 1440px) and (min-width: 1025px) {
-  .bgded .overlay {
-    height: 100vh; 
-    width: 100%;
-  }
-}
+
 
 /* Font */
 .montserrat-regular {
@@ -198,7 +184,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 8vh;
   background: linear-gradient(135deg, #ff3939, #fc1717);
   color: white;
   font-size: 1rem;
@@ -225,24 +211,39 @@ html {
   align-items: center;
   background: linear-gradient(135deg, #ff0000, #fc1717);
   height: 8vh;
-  animation: changeColor 3s infinite alternate, bounce 3s infinite ease-in-out;
+  animation: changeColor 2s infinite alternate, bounce 2s infinite ease-in-out;
 }
 
 /* Smooth color change effect */
 @keyframes changeColor {
   0% { color: #ffffff; }
-  50% { color: #e97676; }
-  100% { color: #ffffff; }
+  50% { color: #ffffff; }
+  100% { color: #000000; }
 }
 
 /* Up-down bouncing effect */
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(40px); }
 }
 
 
+.map-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%; /* Full width of the parent */
+      padding-top: 56.25%; /* Aspect ratio (16:9) */
+      border-radius: 5px;
+    }
 
+    /* Make the iframe responsive */
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 </style>
 
 
@@ -329,17 +330,19 @@ html {
         <!-- ################################################################################################ -->
         <blockquote style="text-align: justify;"></h6>
       </div>
-    </div> <br>
-
+    </div> 
+    
 
     <!-- ################################################################################################ -->
   </section>
+  <section class="scrolling-animation">
+    
+    <div style="align-items: center;text-align: center;"> Keep Scrolling...!<br><i class="fa fa-chevron-down"></i></div>
+  </section>
+  
+   <br>
 </div>
 <!-- ################################################################################################ -->
-<section class="scrolling-animation">
-  <i class="fa fa-chevron-down"></i>
-</section>
-
 
 <div class="wrapper row3 " id="myworks" style="background-color: rgb(2, 2, 2); color:white;">
   
@@ -415,8 +418,12 @@ html {
     </div>
 
       <p style="text-align: justify;">This gallery is a glimpse into my world—my favorite captures and the things that mean the most to me. Hope you enjoy them as much as I do! Just uncover it now...click and scroll</p><br>
-      <div style="display: flex; justify-content: center;">
-        <button class="scrolling-animation2" id="toggleButton" onclick="toggleImages()" style="border-radius: 10px; font-weight: bold;">Click and Scroll</button>
+      <div class="scrolling-animation2"onclick="toggleImages()"  style="border-radius: 5px;">
+        <section id="toggleButton" style="font-size: large;">
+        
+Click
+and Explore
+      </section>
       </div>
 
       <div id="imageGroup">
@@ -426,11 +433,11 @@ html {
                 <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/img4.jpg" alt="" style="border-radius: 5px;"></a></div>
                 <div class="one_half btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/joga.jpg" alt="" style="border-radius: 5px;"></a></div>
                 <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/Mayura2.jpg" alt=""style="border-radius: 5px;"></a></div>
-                <div class="one_half  btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/water.jpg" alt=""style="border-radius: 5px;"></a></div>
+                <div class="one_half  btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/deepam.jpg" alt=""style="border-radius: 5px;"></a></div>
                 <div class="one_half first btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/bus.jpg" alt=""style="border-radius: 5px;"></a></div>
                 <div class="one_half  btmspace-30"><a class="imgover" href="#gallery"><img src="images/demo/gallery/mohanlal.webp" alt=""style="border-radius: 5px;"></a></div>
                 
-                
+
               </figure>
             </div>
             <button id="toggleButtonBottom" class="btn" style="display: none;" onclick="toggleImages()" style="border-radius: 5px;">Show Less</button>
@@ -548,7 +555,7 @@ html {
 </div>
 <!-- ################################################################################################ -->
 <div class="wrapper row4" style="background-color: rgb(0, 0, 0); color:white;">
-  <footer id="footer" class="hoc clear"> 
+  <footer id="footer" class="hoc clear" style="align-items: center;justify-content: center;text-align: center;">
     <!-- ################################################################################################ -->
     <div class="one_quarter first">
       <h6 class="heading">Let's Connect</h6>
@@ -586,8 +593,19 @@ html {
       </article>
     </div>
     <div class="one_quarter">
-      <h6 class="heading">Platforms I Like</h6>
-      <ul class="nospace linklist">
+      <h6 class="heading">Meet Me Here</h6>
+
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3081.9990901136885!2d75.09840147386694!3d12.64462738764152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba49b007d676cc5%3A0x11a99fd1f20adc9d!2sPanchajanya%20Bajakudlu!5e1!3m2!1sen!2sin!4v1740204249845!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- <ul class="nospace linklist">
         <li>
           <a href="https://ai4bharat.iitm.ac.in/" style="color:#fa4d4d;">
             <img src="images/demo/gallery/ai4bharat.png" alt="Figma Logo" style="width:20px;height:20px;vertical-align:middle;margin-right:10px; ">
@@ -612,14 +630,14 @@ html {
             Govt Data Provider
           </a>
         </li>
-      </ul>
+      </ul> -->
     </div>
     
     <!-- ################################################################################################ -->
   </footer>
 </div>
 <!-- ################################################################################################ -->
-<div class="wrapper row5">
+<div class="wrapper row5" style="  justify-content: center;align-items: center;text-align: center;">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <p class="fl_left">Copyright &copy; 2024 - All Rights Reserved  <a href=""></a></p>
