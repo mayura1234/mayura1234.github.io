@@ -76,6 +76,27 @@ html {
   font-style: normal;
 }
 
+/* Responsive Background Images for Affinities Section */
+.bg-hands-responsive {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Desktop - Uses hands.jpg */
+@media (min-width: 768px) {
+  .bg-hands-responsive {
+    background-image: url('images/demo/gallery/home2.jpg') !important;
+  }
+}
+
+/* Mobile - Uses hands-mobile.jpg */
+@media (max-width: 767px) {
+  .bg-hands-responsive {
+    background-image: url('images/demo/gallery/hands.jpg') !important;
+  }
+}
+
 /* ✅ Fixed Preloader Transition */
 #preloader {
   position: fixed;
@@ -168,17 +189,19 @@ html {
 
 /* Default (Desktop) Background */
 .bgded.overlay {
-  background: url('images/demo/gallery/Mayura2.jpg') no-repeat center center;
+  background: url('images/demo/gallery/joga.jpg') no-repeat center center;
   background-size: cover;
 }
 
 /* Mobile Background */
 @media (max-width: 768px) {
   .bgded.overlay {
-    background: url('images/demo/gallery/Mayura.jpg') no-repeat center center;
+    background: url('images/demo/gallery/Me6.jpg') no-repeat center center;
     background-size: cover;
   }
 }
+
+
 
 .scrolling-animation {
   display: flex;
@@ -323,7 +346,7 @@ html {
       <h6 class="heading">Affinities</h6>
     </div>
 
-    <div class="wrapper bgded overlay" style="background-image:url('images/demo/gallery/kitchen.jpg');">
+    <div class="wrapper bgded overlay bg-hands-responsive">
       <div class="hoc container testimonials clear">
         <!-- ################################################################################################ -->
         <article>
